@@ -1,0 +1,48 @@
+\documentclass[
+	final,
+	aspectratio = 169,
+	dvipsnames
+]{beamer}
+
+\usepackage[utf8x]{inputenc} 
+\usepackage{enumerate}
+\usepackage{bbding}
+\usepackage{amsmath}
+\usepackage{fontawesome}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[]{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=structure, urlcolor=structure}
+\usepackage{color}
+\usepackage{natbib}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{appendixnumberbeamer}
+\usepackage{caption}
+\captionsetup{skip=0pt}
+\usepackage{booktabs,dcolumn,caption}
+\usepackage{xltabular}
+\usepackage{array}
+\usepackage[misc]{ifsym}
+
+
+\usetheme{Singapore}
+\setbeamertemplate{frametitle}[default][left]
+\setbeamercolor{block title}{bg=structure!30,fg=black}
+\setbeamercolor{block body}{bg=structure!10,fg=black}
+\setbeamertemplate{section in head/foot}{\hfill\insertsectionheadnumber.~\insertsectionhead}
+\setbeamertemplate{section in head/foot}{\color{structure}\hfill\insertsectionheadnumber.~\insertsectionhead}
+\setbeamercolor{section in head/foot}{fg=black, bg=white}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\defbeamertemplate*{footline}{shadow theme}
+
+\setbeamercolor{bibliography entry author}{fg=black} %color for the bibliographie item
+\setcitestyle{aysep={}} % This remove the comma between author and year cite
+\beamertemplatenavigationsymbolsempty
+
+\renewcommand{\bibsection}{\subsubsection*{\bibname }} 
+\renewcommand*{\bibfont}{\tiny}

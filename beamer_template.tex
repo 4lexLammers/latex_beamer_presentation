@@ -1,0 +1,87 @@
+\input{header.tex}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Titlepage and Table of Contents
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[short title]{Title of presentation}
+\date{\today}
+\author[Author 1 (Institution)]{Author 2 \inst{*} and Author 1\inst{$\dagger$}}
+\institute[]{
+	\inst{*} Institution
+	\and
+	\inst{$\dagger$} Institution
+}
+
+\makeatletter
+\let\old@beamer@writeslidentry\beamer@writeslidentry
+\def\beamer@writeslidentry{%
+	\expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+	{%else
+		\clearpage\beamer@notesactions%
+	}
+}
+\makeatother
+
+\setbeamertemplate{headline}{}
+\begin{document}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Start Slides
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Motivation}
+	\begin{frame}
+		\frametitle{Motivation}
+		\begin{itemize}
+			\item Some fancy text
+			\item \citet{Dustmann2014} show that ...
+			\item This is common knowledge \citep[e.g.][]{Athey2017}.
+		\end{itemize}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{With block element}	
+		\begin{block}{Overview}
+			Fancy text within block
+		\end{block}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\begin{center}
+			\huge{Thank you!}
+			\vspace{2cm}
+		\end{center}
+	\end{frame}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Backup
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	\appendix 
+	\begin{frame}
+		\begin{center}
+			\huge{Backup}
+		\end{center}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Backup title}
+		\label{bargmodel}
+		\begin{itemize}
+			\item Backup slides
+		\end{itemize}
+	\end{frame}
+		
+	
+	\begin{frame}[allowframebreaks]
+		\frametitle{References}
+		\bibliographystyle{newapa}
+		\bibliography{references/references}
+	\end{frame}
+\end{document}
